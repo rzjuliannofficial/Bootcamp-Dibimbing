@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --textBlack: rgb(0, 0, 0);
+    --textWhite: rgb(255, 255, 255);
+    --colorBackground: #FD853A;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    text-decoration: none;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    margin: 10px 5%;
+    align-items: center;
+    background-color: black;
+    border-radius: 50px;
+}
+
+.logo a{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--textWhite);
+    background-color: var(--colorBackground);
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a{
+    justify-content: space-between;
+    color: var(--textWhite);
+    /* font-weight: bold; */
+}
+
+.burger div {
+    width: 25px;
+    height: 4px;
+    background-color: #000 ;
+    border-radius: 25px;
+    margin: 5px;
+}
+
+.burger {
+    display:none; 
+    position: fixed;
+    right: 35px;
+}
+
+.resume button{
+    /* display: none; */
+    height: 50px;
+    width: 100px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    background-color: var(--colorBackground);
+    box-shadow: #000;
+    cursor: pointer;
+    /* font-weight: bold; */
+}
+
+.resume button:hover {
+    height: 50px;
+    width: 100px;
+    border-radius: 50px;
+    border: none;
+    color: var(--colorBackground);
+    background-color: rgb(255, 255, 255);
+    box-shadow: #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover{
+    color: #000;
+}
+
+header nav ul li a:hover {
+    color: var(--colorBackground);
+}
+
+/* digunakan untuk responsive website */
+@media screen and (max-width: 930px) {
+    /* jika besar screen segitu ubah fitur2 menyesuaikan layar */
+    header{
+        padding: 11px 10px;
+        background-color: black;
+        width: 78px; 
+    }
+    
+    header nav {
+        display: none; /* Sembunyikan navbar */
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        background-color: rgb(77, 77, 77);
+        margin: 15px;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        z-index: 98;
+    }
+    
+    header nav ul {
+        display: block;
+
+    }
+    
+    header nav.active {
+        display: flex ; /*Tampilkan navbar saat burger diklik */
+    }
+    
+    header .burger {
+        display: block; /* Tampilkan burger menu */
+        cursor: pointer;
+    }
+    
+    .resume button{
+        background-color: var(--colorBackground);
+        width: 80px;
+        height: 50px;
+    }
+
+    .resume button:hover {
+        width: 80px;
+        height: 50px;
+        border-radius: 50px;
+        border: none;
+        color: var(--colorBackground);
+        background-color: white;
+        box-shadow: #000;
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+
+
+/* MAIN */
+#hero {
+    height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* ini itu untuk mengasih efek grid */
+    align-items: center;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-right img{
+    width: 400px;
+}
+
+.hero-left {
+    padding-left: 110px;
+}
+.hero-left .pre-title {
+    text-transform: uppercase; /* ini itu untuk mengasih efek uppercase */
+    letter-spacing: 8px; /* ini itu untuk mengasih efek spasi antar huruf */
+    color: #656d72;
+    position: relative; /* ini itu untuk mengasih efek posisi */
+    width: fit-content;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.hero-left .hero-name {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 16px 0 16px; /* 8px untuk margin atas dan bawah , sedangkan 0 untuk margin kiri dan kanan, dan 16px untuk margin bawah */
+    /* padding-left: 40px; */
+    color: var(--colorBackground);
+}
+
+.hero-name span {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 16px 0 16px; /* 8px untuk margin atas dan bawah , sedangkan 0 untuk margin kiri dan kanan, dan 16px untuk margin bawah */
+    background: linear-gradient(90deg, #FD853A, #f3dd18, #ffa200 );
+    background-size: 200%;
+    background-clip: text;
+    color: transparent;
+    animation: hero-name 4s infinite linear;
+}
+
+@keyframes hero-name {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+.text {
+    text-transform: uppercase; /* ini itu untuk mengasih efek uppercase */
+    letter-spacing: 8px; /* ini itu untuk mengasih efek spasi antar huruf */
+    color: #28171b;
+    position: relative; /* ini itu untuk mengasih efek posisi */
+    width: fit-content;
+    font-weight: 900;
+    font-size: 2rem;
+    animation: typing 1.5s steps(30, end) forwards, blinking 1s infinite;
+}
+
+@media screen and (max-width : 930px) {
+
+    .hero-right img{
+        width: 75%;
+    }
+
+    .hero-left {
+        padding-left: 80px;
+    }
+
+    .hero-left .pre-title {
+        text-transform: uppercase; /* ini itu untuk mengasih efek uppercase */
+        letter-spacing: 8px; /* ini itu untuk mengasih efek spasi antar huruf */
+        color: #656d72;
+        position: relative; /* ini itu untuk mengasih efek posisi */
+        width: fit-content;
+        font-weight: 700;
+        font-size: 50%;
+    }
+    
+    .hero-left .hero-name {
+        font-size: 100%;
+        font-weight: 700;
+        margin: 16px 0 16px; /* 8px untuk margin atas dan bawah , sedangkan 0 untuk margin kiri dan kanan, dan 16px untuk margin bawah */
+        /* padding-left: 40px; */
+        color: var(--colorBackground);
+    }
+    
+    .hero-name span {
+        font-size: 100%;
+        font-weight: 700;
+        margin: 16px 0 16px; /* 8px untuk margin atas dan bawah , sedangkan 0 untuk margin kiri dan kanan, dan 16px untuk margin bawah */
+        background: linear-gradient(90deg, #FD853A, #f3dd18, #ffa200 );
+        background-size: 200%;
+        background-clip: text;
+        color: transparent;
+        animation: hero-name 4s infinite linear;
+    }
+
+    .text {
+        text-transform: uppercase; /* ini itu untuk mengasih efek uppercase */
+        letter-spacing: 8px; /* ini itu untuk mengasih efek spasi antar huruf */
+        color: #28171b;
+        position: relative; /* ini itu untuk mengasih efek posisi */
+        width: fit-content;
+        font-weight: 900;
+        font-size: 100%;
+        animation: typing 1.5s steps(30, end) forwards, blinking 1s infinite;
+    }
+}
+
+/* ASIDE */
+main aside {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+}
+ 
+main aside .social-media {
+    height: 1000px;
+    display: flex;
+}
+ 
+main aside .social-media ul {
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin: auto;
+    background-color: #2d3e50;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+ 
+main aside .social-media li {
+    list-style-type: none;
+}
+ 
+main aside .social-media li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+}
+ 
+main aside .social-media li a:hover {
+    color: var(--colorBackground);
+}
+
+/* About */
+#about{
+    height: 700px;
+    display: flex;
+    grid-template-columns: 1fr 1fr; /* ini itu untuk mengasih efek grid */
+    align-items: center;
+    background-color: #ffffff;
+    margin: 2rem 0;
+    
+}
+
+.about-right{
+    justify-content: center;
+   
+}
+
+.about-left{
+    display: flex;
+    justify-content: center;
+}
+
+.about-left img{
+    width: 400px;
+    padding: 0px 150px;
+}
+
+.about-right .title-about {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.about-right .text-about {
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 30px;
+}
+
+
+.skills ul li {
+    /* padding-top: 30px; */
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.about-right .skills img{
+    width: 80%;
+}

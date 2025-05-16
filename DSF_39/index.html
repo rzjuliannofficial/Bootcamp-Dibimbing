@@ -4,19 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSF 39</title>
-    <link rel="stylesheet" href="/DSF_39/style/style.css">
+    <link rel="stylesheet" href="/DSF_39/assets/style/style.css">
+
+     <!-- Font Awesome 5.15.4  untuk icon-->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="">Jn</a>
+            <a href="">Julian</a>
         </div>
         <nav>
             <ul>
-                <li><a href="">Katalog</a></li>
-                <li><a href="">Fashion</a></li>
-                <li><a href="">Link</a></li>
-                <li><a href="">Join</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="resume">
+                    <a href="">
+                        <button>Resume</button>    
+                    </a>   
+                </li>
             </ul>
         </nav>
 
@@ -28,6 +43,84 @@
 
     </header>
     
+    <main>
+        <section id="hero">
+            <div class="hero-left">
+                <h3>
+                    <div class="pre-title">
+                    -Hai, I am-
+                    </div>
+                </h3>
+                <h1>
+                    <div class="hero-name">
+                        Nabhan Rizqi <span>Julian Saputro</span>
+                    </div>
+                </h1>
+                <div class="text">
+                    <p>I'm a 
+                        <span class="auto-typing"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="hero-right">
+                <img src="/DSF_39/assets/img/Desain tanpa judul (3).png" alt="">
+            </div>
+        </section>
+        <aside>
+            <div class="social-media">
+              <ul>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              </ul>
+            </div>
+        </aside>
+
+        <section id="about">
+            <div class="about-left">
+                <img src="/DSF_39/assets/img/Desain tanpa judul (3).png" alt="">
+            </div>
+            <div class="about-right">
+                <h1>
+                    <div class="title-about">
+                        About Me
+                    </div>
+                </h1>
+                <div class="text-about">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam omnis sapiente a maiores saepe quos, quibusdam numquam deleniti iste optio perspiciatis beatae praesentium possimus nesciunt eaque maxime, voluptate suscipit rerum.</p>
+                </div>
+                <div class="skills">
+                    <ul>
+                        <li>
+                            <h3>
+                                UI/UX
+                            </h3>
+                            <img src="/DSF_39/assets/img/UX.png" alt="">
+                        </li>
+                        <li>
+                            <h3>
+                                Critical Thinking
+                            </h3>
+                            <img src="/DSF_39/assets/img/critical.png" alt="">                           
+                        </li>
+                        <li>
+                            <h3>
+                                Web Design
+                            </h3>
+                            <img src="/DSF_39/assets/img/Webdesign.png" alt="">
+                        </li>
+                        <li>
+                            <h3>
+                                Public Speaking
+                            </h3>
+                            <img src="/DSF_39/assets/img/publicSpeaking.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
 
@@ -43,5 +136,19 @@
         nav.classList.toggle('active'); // Toggle class 'active' untuk menampilkan/menyembunyikan navbar
     });
 });
+
+</script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed (".auto-typing" , 
+        {
+            strings : ["FrontEnd Developer" ,"BackEnd Developer" ,"FullStack Developer"],
+            typeSpeed : 100 ,
+            backSpeed : 100 ,
+            loop : true
+        });   
 </script>
 </html>
+
+
+
