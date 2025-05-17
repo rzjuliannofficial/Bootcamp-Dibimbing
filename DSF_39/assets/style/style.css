@@ -27,6 +27,7 @@ header nav{
     background-color: #2d3e50;
     border-radius: 50px; 
     padding: 8px 15px;
+    right: 0;
 }
 
 .logo img {
@@ -102,13 +103,14 @@ header nav ul li a:hover {
     /* jika besar screen segitu ubah fitur2 menyesuaikan layar */
     header{
         background-color: rgb(255, 255, 255);
+
     }
     
     header nav {
         display: none; /* Sembunyikan navbar */
         flex-direction: column;
         position: fixed;
-        top: 60px;
+        top: 70px;
         right: 0;
         background-color: rgb(77, 77, 77);
         margin: 15px;
@@ -317,7 +319,7 @@ main aside .social-media li a:hover {
 /* About */
 #about{
     height: 700px;
-    display: flex;
+    display: grid;
     grid-template-columns: 1fr 1fr; /* ini itu untuk mengasih efek grid */
     align-items: center;
     margin: 2rem 0px;
@@ -339,14 +341,16 @@ main aside .social-media li a:hover {
     padding: 0px 100px;
 }
 
+
 .about-right .title-about {
     text-align: left;
     padding-left: 20px;
+    font-size: 3rem;
 }
 
 .about-right .text-about {
     text-align: left;
-    padding-left: 20px;
+    padding: 0 20px;
     padding-bottom: 30px;
 }
 
@@ -364,36 +368,143 @@ main aside .social-media li a:hover {
 @media screen and (max-width: 1000px) {
     #about{
         display: block;
-    }
-    .about-left{
-        display: flex;
-        justify-content: center;
+        height: 900px;
     }
     
     .about-left img{
         width: 40%;
-        padding: 0px 150px;
     }
     
     .about-right .title-about {
-        text-align: left;
-        padding-left: 20px;
+        text-align: center;
     }
     
     .about-right .text-about {
-        text-align: left;
-        padding-left: 20px;
-        padding-bottom: 30px;
+        text-align: center;
     }
     
     
     .skills ul li {
-        /* padding-top: 30px; */
-        list-style-type: none;
-        padding-left: 20px;
+        padding:0px 20px;
     }
     
     .about-right .skills img{
         width: 80%;
+    }
+}
+
+/* Services */
+
+#services{
+    display: block;
+    height: 700px;
+    align-items: center;
+    margin: 2rem 5rem;
+    padding-top: 3rem;
+}
+
+.service-title {
+    text-align: center;
+    font-size: 50px;
+}
+
+.text-services p{
+    text-align:center;
+    padding: 0px 10rem;
+    padding-bottom: 2rem;
+}
+
+.card {
+    display: flex;
+    padding-top: 1rem;
+    gap: 1rem;
+}
+
+.card .ui{
+    background-color: #F8F8F8;
+    padding: 2rem 1rem ;
+    border-radius: 25px;
+}
+.card .critical{
+    background-color: #F8F8F8;
+    padding: 2rem 1rem ;
+    border-radius: 25px;
+}
+.card .webdev{
+    background-color: #F8F8F8;
+    padding: 2rem 1rem ;
+    border-radius: 25px;
+}
+.card .publicspeaking{
+    background-color: #F8F8F8;
+    padding: 2rem 1rem ;
+    border-radius: 25px;
+}
+
+.service-icon {
+    /* text-align: center; */
+    font-size: 2.5rem;
+    color: var(--colorBackground);
+    
+}
+
+.card h3{
+    padding: 1rem 0px;
+}
+
+@media  screen and (max-width: 1000px) {
+    
+    #services {
+        padding-top: 2rem;
+    }
+    
+    
+    .text-services p{
+        padding: 0;
+    }
+    
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* ini itu untuk mengasih efek grid */
+        padding-top: 1rem;
+    }
+    
+    .card .ui{
+        background-color: #F8F8F8;
+        padding: 2rem 1rem ;
+        border-radius: 25px;
+        margin-bottom: 1rem;
+    }
+    
+    .card .critical{
+        background-color: #F8F8F8;
+        padding: 2rem 1rem ;
+        border-radius: 25px;
+        margin-bottom: 1rem;
+    }
+    .card .webdev{
+        background-color: #F8F8F8;
+        padding: 2rem 1rem ;
+        border-radius: 25px;
+        margin-bottom: 1rem;
+    }
+    .card .publicspeaking{
+        background-color: #F8F8F8;
+        padding: 2rem 1rem ;
+        border-radius: 25px;
+        margin-bottom: 1rem;
+    }
+    
+    .service-icon {
+        /* text-align: center; */
+        font-size: 2.5rem;
+        color: var(--colorBackground);
+        
+    }
+
+    @media  screen and (max-width: 600px) {
+    .card {
+        grid-template-columns: 1fr ;
+    }
     }
 }
