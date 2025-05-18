@@ -99,7 +99,7 @@ header nav ul li a:hover {
 }
 
 /* digunakan untuk responsive website */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     /* jika besar screen segitu ubah fitur2 menyesuaikan layar */
     header{
         background-color: rgb(255, 255, 255);
@@ -224,10 +224,15 @@ header nav ul li a:hover {
     animation: typing 1.5s steps(30, end) forwards, blinking 1s infinite;
 }
 
-@media screen and (max-width : 1000px) {
+@media screen and (max-width : 1100px) {
+
+    #hero {
+        /* display: block; */
+        /* height: 900px; */
+    }
 
     .hero-right img{
-        width: 75%;
+        width: 73%;
     }
 
     .hero-left {
@@ -283,7 +288,7 @@ main aside {
 }
  
 main aside .social-media {
-    height: 1000px;
+    height: 1100px;
     display: flex;
 }
  
@@ -350,7 +355,7 @@ main aside .social-media li a:hover {
 
 .about-right .text-about {
     text-align: left;
-    padding: 0 20px;
+    padding: 1rem 20px;
     padding-bottom: 30px;
 }
 
@@ -365,14 +370,16 @@ main aside .social-media li a:hover {
     width: 80%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     #about{
         display: block;
         height: 900px;
+        padding: 0px 4rem;
+        margin: 0px;
     }
     
     .about-left img{
-        width: 40%;
+        width: 50%;
     }
     
     .about-right .title-about {
@@ -380,7 +387,7 @@ main aside .social-media li a:hover {
     }
     
     .about-right .text-about {
-        text-align: center;
+        text-align: justify;
     }
     
     
@@ -399,7 +406,7 @@ main aside .social-media li a:hover {
     display: block;
     height: 700px;
     align-items: center;
-    margin: 2rem 5rem;
+    margin: 0rem 5rem;
     padding-top: 3rem;
 }
 
@@ -410,8 +417,7 @@ main aside .social-media li a:hover {
 
 .text-services p{
     text-align:center;
-    padding: 0px 10rem;
-    padding-bottom: 2rem;
+    padding: 1rem 10rem;
 }
 
 .card {
@@ -420,22 +426,7 @@ main aside .social-media li a:hover {
     gap: 1rem;
 }
 
-.card .ui{
-    background-color: #F8F8F8;
-    padding: 2rem 1rem ;
-    border-radius: 25px;
-}
-.card .critical{
-    background-color: #F8F8F8;
-    padding: 2rem 1rem ;
-    border-radius: 25px;
-}
-.card .webdev{
-    background-color: #F8F8F8;
-    padding: 2rem 1rem ;
-    border-radius: 25px;
-}
-.card .publicspeaking{
+.card-service {
     background-color: #F8F8F8;
     padding: 2rem 1rem ;
     border-radius: 25px;
@@ -452,59 +443,108 @@ main aside .social-media li a:hover {
     padding: 1rem 0px;
 }
 
-@media  screen and (max-width: 1000px) {
+@media  screen and (max-width: 1100px) {
     
     #services {
-        padding-top: 2rem;
+        padding-top: 10rem;
     }
-    
     
     .text-services p{
         padding: 0;
+        text-align: justify;
     }
     
     .card {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* ini itu untuk mengasih efek grid */
-        padding-top: 1rem;
-    }
+        grid-template-columns: 1fr 1fr;
+    } 
     
-    .card .ui{
-        background-color: #F8F8F8;
-        padding: 2rem 1rem ;
-        border-radius: 25px;
-        margin-bottom: 1rem;
-    }
-    
-    .card .critical{
-        background-color: #F8F8F8;
-        padding: 2rem 1rem ;
-        border-radius: 25px;
-        margin-bottom: 1rem;
-    }
-    .card .webdev{
-        background-color: #F8F8F8;
-        padding: 2rem 1rem ;
-        border-radius: 25px;
-        margin-bottom: 1rem;
-    }
-    .card .publicspeaking{
-        background-color: #F8F8F8;
-        padding: 2rem 1rem ;
-        border-radius: 25px;
-        margin-bottom: 1rem;
-    }
-    
-    .service-icon {
-        /* text-align: center; */
-        font-size: 2.5rem;
-        color: var(--colorBackground);
-        
-    }
+}
 
-    @media  screen and (max-width: 600px) {
+@media  screen and (max-width: 700px) {
+
+    #services {
+        padding-top: 0rem;
+    }
     .card {
         grid-template-columns: 1fr ;
     }
+}
+
+/* project */
+
+#project {
+    display: block;
+    height:900px;
+    align-items: center;
+    margin: 0rem 5rem;
+}
+
+h1 .project-title {
+    text-align: center;
+    font-size: 50px;
+}
+
+.text-project p {
+    text-align: center;
+    padding: 1rem 10rem;
+    padding-bottom: 2rem;
+}
+
+.project-card{
+    display: flex;
+}
+
+.card-project {
+    margin: 0px 20px;
+}
+
+.card-project img {
+    width: 100%;
+}
+
+.card-project h4 {
+    padding: 1rem 0px;
+    font-size: 17px;
+    color: var(--colorBackground);
+}
+
+.card-project p {
+    font-weight: bold;
+    font-size: 19px;
+}
+
+@media screen and (max-width: 1100px) {
+    #project {
+        padding-top: 100px;
+    }
+
+    .text-project p {
+        padding: 1rem 1rem;
+        text-align: justify;
+    }
+
+    .project-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .card-project p {
+        padding-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #project {
+        margin-top: 35rem;
+    }
+
+    .project-card {
+        display: block;
+        padding: 1rem 0px;
+    }
+    
+    .card-project img{
+        width: 100%;
     }
 }
