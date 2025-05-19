@@ -11,6 +11,7 @@
     padding: 0;
     font-family: 'Poppins';
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 /* HEADER */
@@ -545,3 +546,123 @@ h1 .project-title {
         width: 100%;
     }
 }
+
+/* Contact */
+#contact {
+    display: block;
+    height: 500px;
+    align-items: center;
+    padding: 0rem 5rem;
+    background-color: #272727;
+    color: var(--textWhite);
+    border-radius: 25px 25px 0px 0px;
+}
+
+.connect {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0px;
+    align-items: center;
+}
+
+.connect .contact-title{
+    font-size: 2.5rem;
+}
+
+.contact-button {
+    background-color: var(--colorBackground);
+    color: var(--colorText);
+    width: 230px;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.contact-button:hover {
+    background-color: rgb(255, 255, 255);
+    color: var(--colorBackground);
+    box-shadow: #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    /* background-color: #656d72; */
+}
+
+.contact-right h1 {
+    font-size: 2rem;
+}
+
+.contact-right form{
+    padding: 2rem 0px;
+}
+
+.contact-right form input{
+    width: 95%;
+    padding: 1rem;
+}
+
+.contact-right .submit-button {
+    text-align: center;
+}
+
+.submit-button {
+    background-color: var(--colorBackground);
+    color: var(--colorText);
+    width: 230px;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.submit-button:hover {
+    background-color: rgb(255, 255, 255);
+    color: var(--colorBackground);
+    box-shadow: #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-left h1{
+   padding: 1rem 0px ;
+}
+
+.contact-left p {
+    padding: 0.5rem 0px;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #000000;
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.social-icons a:hover {
+    color: var(--colorBackground);
+    transition: color 0.3s ease;
+}
+
